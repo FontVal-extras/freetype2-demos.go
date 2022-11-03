@@ -26,6 +26,7 @@ func main() {
 	var lib C.FT_Library
 	if err := C.FT_Init_FreeType(&lib); err != 0 {
 		fmt.Fprintln(os.Stderr, "unable to init freetype")
+		// FT_Error needs int() cast.
 		os.Exit(int(err))
 		return
 	}
@@ -37,5 +38,5 @@ func main() {
 	C.FT_Library_Version(lib, &major, &minor, &patch)
 	// cast to int() as FT_Int is not necessarily Go's int.
 	// Go's int is 64-bit on 64-bit platforms.
-	fmt.Printf("OK (%d.%d.%d)\n", int(major), int(minor), int(patch))
+	fmt.Printf("OK (%d.%d.%d)\n", major, minor, patch)
 }	
