@@ -29,7 +29,8 @@ func main() {
 		os.Exit(int(err))
 		return
 	}
-
+	// defer's are stacked first-in-last-out, so this line
+	// is executed last, when placed immediately after init.
 	defer C.FT_Done_FreeType(lib)
 
 	var major, minor, patch C.FT_Int
