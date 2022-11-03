@@ -36,7 +36,5 @@ func main() {
 
 	var major, minor, patch C.FT_Int
 	C.FT_Library_Version(lib, &major, &minor, &patch)
-	// cast to int() as FT_Int is not necessarily Go's int.
-	// Go's int is 64-bit on 64-bit platforms.
 	fmt.Printf("OK (%d.%d.%d)\n", major, minor, patch)
 }	
