@@ -2,6 +2,8 @@ package main
 
 // Copyright (c) 2022 Hin-Tak Leung
 
+// Basic FreeType test - just print Version.
+
 // Notes: Go have functional comments... The below lines are actually used by cgo.
 
 // #cgo pkg-config: freetype2
