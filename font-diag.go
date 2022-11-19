@@ -2,7 +2,8 @@ package main
 
 // Copyright (c) 2022 Hin-Tak Leung
 
-// Basic FreeType test - just print Version.
+// Diagnostics with FontVal's backend.
+//     - Approx re-write of examples/font-diag.py in the sister freetype-py project.
 
 // Notes: Go have functional comments... The below lines are actually used by cgo.
 
