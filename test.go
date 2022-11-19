@@ -37,4 +37,4 @@ func main() {
 	var major, minor, patch C.FT_Int
 	C.FT_Library_Version(lib, &major, &minor, &patch)
 	fmt.Printf("OK (%d.%d.%d)\n", major, minor, patch)
-}	
+}
